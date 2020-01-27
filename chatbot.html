@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>GPS</title>
+		<title>Chatbot</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,11 +16,11 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">GPS</a>
+				<a href="index.html" class="title">Chatbot</a>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="gps.html" class="active">GPS</a></li>
+						<li><a href="chatbot.html" class="active">Chatbot</a></li>
 						<li><a href="index.html#one">Projects</a></li>
 					</ul>
 				</nav>
@@ -32,9 +32,16 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">GPS monitoring system</h1>
-							<span class="image fit"><img src="images/map.png" alt="" /></span>
-							<p>Worked on a GPS monitoring system for a company in New York (remotely) using <b>Google’s Javascript API</b>, <b>ActionCable</b> and <b>Sidekiq</b>. The system worked similar to known plattforms like Uber. For that end, <b>JSON</b> responses were handled for refreshing the status of the map.</p>
+							<h1 class="major">Chatbot</h1>
+							<span class="image fit"><img src="images/telegram2.png" alt="" /></span>
+
+<p>Developed from scratch a chatbot for the Universidad de Costa Rica using the <b>Telegram API</b>. The chatbot offers menus with information of the
+Electrical Engineering career and it’s capable of understanding general questions. Information sent includes text, attached documents,
+pictures and videos.</p>
+<p>At the same time, statistics and useful information is stored in a database (<b>MySQL</b>). An administrator is capable
+of sending custom messages to audience (groups or private chats) on behalf of chatbot’s name, and a webpage for monitoring stats were
+also created using <b>SQL Data Extraction</b>. Some of the stadistics are: number of messages in the last week/month, most asked question, most asked topic, questions the chatbot were not able to understand.</p>
+<p>For this project the main code was written in <b>PHP</b> and different scripts in Perl were created for administrator activities (messages, stats monitoring). <b>Git</b> SSH keys were configured in the server so the administrator can change the chat contents externally.</b>
 						</div>
 					</section>
 

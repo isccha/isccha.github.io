@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>GPS</title>
+		<title>URL shortener</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,11 +16,11 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">GPS</a>
+				<a href="index.html" class="title">Hyperspace</a>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="gps.html" class="active">GPS</a></li>
+						<li><a href="short.html" class="active">URL shortener</a></li>
 						<li><a href="index.html#one">Projects</a></li>
 					</ul>
 				</nav>
@@ -32,9 +32,26 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">GPS monitoring system</h1>
-							<span class="image fit"><img src="images/map.png" alt="" /></span>
-							<p>Worked on a GPS monitoring system for a company in New York (remotely) using <b>Google’s Javascript API</b>, <b>ActionCable</b> and <b>Sidekiq</b>. The system worked similar to known plattforms like Uber. For that end, <b>JSON</b> responses were handled for refreshing the status of the map.</p>
+							<h1 class="major">URL shortener</h1>
+							<span class="image fit"><img src="images/shortener.png" alt="" /></span>
+
+							<p>As part of an online project, developed a full functional URL shortener using <b>Ruby on Rails 6</b> for the backend and <b>React Router</b> for the frontend. The description is as follows:</p>
+<b>Backend:</b>
+<ul>
+<li>Given a URL, a shortcode is given back for that URL of the shortest possible length relative to the number of links currently in the system. The implementation uses base 62 encryption.</li>
+<li>Invalid URLs are not saved into the system.</li>
+<li>The webpage succesfully redirects to the full URL by accessing the generated shortcode.</li>
+<li>There is an API response (<b>JSON</b>) with the top 100 most frequently accessed shortcodes.</li>
+<li>The title for each of the shortened URLs is fetched (using <b>OpenUri</b>) and stored in the database using a background job (using <b>ApplicationJob</b>).</li>
+</ul>
+<b>Frontend</b>
+<ul>
+   <li>There is a view for the Top 100 most frequently accessed URLs.</li>
+   <li>There is a form for inputting URLs into the system.</li>
+   <li>Entering a valid URL results in displaying the new shortened URL to the user.</li>
+   <li>Entering an invalid URL results in displaying errors to the user. </li>
+</ul>
+
 						</div>
 					</section>
 
